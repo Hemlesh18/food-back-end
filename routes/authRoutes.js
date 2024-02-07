@@ -5,7 +5,7 @@ const { test, registerUser, loginUser, getProfile, logoutUser } = require('../co
 
 
 //middleware
-router.use(cors());
+router.use(cors({origin:true}));
 
 router.get("/", test)
 router.post("/register", registerUser)
