@@ -5,7 +5,13 @@ const { test, registerUser, loginUser, getProfile, logoutUser } = require('../co
 
 
 //middleware
-router.use(cors({origin:true}));
+// router.use(cors({origin:true}));
+
+router.use(cors({
+    origin: 'https://food-frontend-crpn.onrender.com',
+    credentials: true
+  }));
+  
 
 router.get("/", test)
 router.post("/register", registerUser)
